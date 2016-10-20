@@ -1,0 +1,4 @@
+Unit Testing:
+1) App Layer:Servie unit testing was done using web browser and WCF Client tool
+2) Angular JS service can be tested with out view independly by invoking the service method in mock test.
+3) View User interface will display end data to the user.
