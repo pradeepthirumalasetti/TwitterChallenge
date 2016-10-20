@@ -1,0 +1,13 @@
+﻿TweetsTable{
+    width: 100%;
+}
+
+.table > th
+{
+    background-color:#F1F1F1;
+}
+
+.tweetsTable{
+    background-color:gainsboro;
+}
+

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>Salesforce TimeLine Data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="../scripts/twitterinfoapp.js"></script>
+    <script src="../scripts/twitterinfocontroller.js"></script>
+    <script src="../scripts/twitterinfoservice.js"></script>
+    <link href="../styles/twitterInfo.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body ng-app="TwitterFeedApp" ng-controller="twitterinfocontroller">
+    <table align="center">
+        <tbody>
+            <tr>
+                <td><h3>Sales Force Time Line Data</h3></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container">
+        <table class="table table-bordered" align="center" cellpadding="4" style="border:1px solid grey">
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>User ScreenName</th>
+                    <th>Profile Image</th>
+                    <th>Tweet Content  <img src="../Images/images.png" width="20" height="20" alt="Filter" /><input type="text" ng-model="tweetTextFilter" placeholder="Filter Tweets..." />]</th>
+                    <th>Retweeted Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tweetData in screenNameTweetsData | filter : tweetTextFilter">
+                    <td>{{tweetData.UserName}}</td>
+                    <td>{{tweetData.ScreenName}}</td>
+                    <td><img src="{{tweetData.ProfileImageUrl}}" /></td>
+                    <td>{{tweetData.TweetText}}</td>
+                    <td>{{tweetData.TweetText}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
